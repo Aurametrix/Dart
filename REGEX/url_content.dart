@@ -1,6 +1,7 @@
+import tango.io.Console;
+import tango.net.http.HttpGet;
  
 void main() {
-  import std.stdio, std.net.curl;
-  writeln(get("http://google.com"));
+  Cout.stream.copy( (new HttpGet("http://google.com")).open );
 }
  
